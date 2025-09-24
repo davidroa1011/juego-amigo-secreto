@@ -9,8 +9,9 @@ function agregarAmigo(){
     // Definimos nombre Amigo y lo conectamos con el valor dentro de HTML definido en la caja de texto
     const inputAmigo = (document.getElementById("amigo").value);
     // Utilizamos .trim para eliminar espacios a inicio y final del nombre
-    const nombreAmigo = inputAmigo.trim();
-    //Agregamos nombre amigo al final del array amigos
+    const nombre = inputAmigo.trim();
+    //Cambiamos la primera letra a mayuscula
+    const nombreAmigo = nombre.charAt(0).toUpperCase() + nombre.slice(1);
     
     if (nombreAmigo===""){
         alert("Por favor inserte un nombre");
@@ -82,3 +83,4 @@ function sortearAmigo(){
 
 
 agregarAmigo();
+
